@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+  function toggleDarkMode() {
+      document.documentElement.classList.toggle('my-app-dark');
+  }
+</script>
 
 <template>
   <h1>You did it!</h1>
@@ -7,6 +11,7 @@
     documentation
   </p>
   <Button label="Verify" />
+  <Button label="Toggle Dark Mode" @click="toggleDarkMode()" />
 </template>
 
 <style scoped></style>
