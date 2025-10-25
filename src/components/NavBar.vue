@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div>
         <Tabs value="/">
             <TabList>
                 <Tab v-for="tab in items" :key="tab.label" :value="tab.route">
@@ -22,18 +22,17 @@ import TabList from 'primevue/tablist';
 import Tab from 'primevue/tab';
 
 const items = ref([
-    { route: '/', label: 'Главная', icon: 'pi pi-home' },
-    { route: '/ideas', label: 'Идеи', icon: 'pi pi-lightbulb' },
-    { route: '/achievements', label: 'Достижения', icon: 'pi pi-star' },
-    { route: '/profile', label: 'Профиль', icon: 'pi pi-user' }
-]);
+    { label: 'Главная', icon: 'pi pi-home', route: '/' },
+    { label: 'Мои идеи', icon: 'pi pi-lightbulb', route: '/ideas' },
+    { label: 'Подать идею', icon: 'pi pi-plus-circle', route: '/submit-idea' },
+    { label: 'Модерация', icon: 'pi pi-check-circle', route: '/moderation' },
+    { label: 'Достижения', icon: 'pi pi-star', route: '/achievements' },
+    { label: 'Игра', icon: 'pi pi-play', route: '/game' },
+    { label: 'Профиль', icon: 'pi pi-user', route: '/profile' }
+])
 </script>
 
 <style scoped>
-.card {
-    margin-bottom: 2rem;
-}
-
 /* Стили для активной вкладки */
 :deep(.p-tablist .p-tab.p-highlight) {
     background-color: var(--primary-color);

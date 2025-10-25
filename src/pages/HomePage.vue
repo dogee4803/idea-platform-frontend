@@ -10,14 +10,6 @@
 </template>
 
 <script>
-import Button from 'primevue/button'
-
-export default {
-  name: 'HomeView',
-  components: {
-    Button
-  }
-}
 </script>
 
 <style scoped>

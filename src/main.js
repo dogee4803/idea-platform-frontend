@@ -11,6 +11,7 @@ import TabList from 'primevue/tablist';
 import Tab from 'primevue/tab';
 import TabPanels from 'primevue/tabpanels';
 import TabPanel from 'primevue/tabpanel';
+import Card from 'primevue/card';
 
 import router from './router'
 
@@ -32,6 +33,7 @@ app.component('TabList', TabList);
 app.component('Tab', Tab);
 app.component('TabPanels', TabPanels);
 app.component('TabPanel', TabPanel);
+app.component('Card', Card);
 
 app.use(router)
 app.mount('#app');
