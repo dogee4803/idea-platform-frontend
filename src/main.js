@@ -12,6 +12,7 @@ import Tab from 'primevue/tab';
 import TabPanels from 'primevue/tabpanels';
 import TabPanel from 'primevue/tabpanel';
 import Card from 'primevue/card';
+import Divider from 'primevue/divider';
 
 import router from './router'
 
@@ -34,6 +35,7 @@ app.component('Tab', Tab);
 app.component('TabPanels', TabPanels);
 app.component('TabPanel', TabPanel);
 app.component('Card', Card);
+app.component('Divider', Divider);
 
 app.use(router)
 app.mount('#app');
