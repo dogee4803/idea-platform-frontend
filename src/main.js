@@ -6,6 +6,13 @@ import Aura from '@primeuix/themes/aura';
 import 'primeicons/primeicons.css'
 import Button from "primevue/button"
 import ToggleSwitch from 'primevue/toggleswitch';
+import Tabs from 'primevue/tabs';
+import TabList from 'primevue/tablist';
+import Tab from 'primevue/tab';
+import TabPanels from 'primevue/tabpanels';
+import TabPanel from 'primevue/tabpanel';
+
+import router from './router'
 
 const app = createApp(App);
 
@@ -20,5 +27,11 @@ app.use(PrimeVue, {
 
 app.component('Button', Button);
 app.component('ToggleSwitch', ToggleSwitch);
+app.component('Tabs', Tabs);
+app.component('TabList', TabList);
+app.component('Tab', Tab);
+app.component('TabPanels', TabPanels);
+app.component('TabPanel', TabPanel);
 
+app.use(router)
 app.mount('#app');

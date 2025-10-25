@@ -1,5 +1,7 @@
 <script setup>
   import { ref, watch } from 'vue'
+  import NavBar from './components/NavBar.vue'
+  import Header from './components/Header.vue'
 
   // Считываем состояние тёмной темы из localStorage
   const checked = ref(localStorage.getItem('darkMode') === 'enabled')
@@ -21,27 +23,10 @@
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-  <Button label="Verify" />
-  <Button label="Toggle Dark Mode" @click="toggleDarkMode()" />
-  <!-- Переключатель темы -->
-  <div class="toggle-container">
-    <div class="toggle-text">
-      <i
-        :class="[
-          'pi',
-          { 'pi-sun': !checked, 'pi-moon': checked },
-          'toggle-icon'
-        ]"
-      />
-    </div>
-    <ToggleSwitch v-model="checked">
-      <template #handle="{ checked }"></template>
-    </ToggleSwitch>
+  <Header />
+  <div id="app">
+    <NavBar />
+    <router-view />
   </div>
 </template>
 
