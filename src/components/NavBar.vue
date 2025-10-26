@@ -17,9 +17,12 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import Tabs from 'primevue/tabs';
 import TabList from 'primevue/tablist';
 import Tab from 'primevue/tab';
+
+const router = useRouter()
 
 const items = ref([
     { label: 'Главная', icon: 'pi pi-home', route: '/' },
